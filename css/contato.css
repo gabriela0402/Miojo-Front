@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --amarelo: #FFE066;
+    --branco: #FFFEF8;
+    --laranja-claro: #FFBF36;
+    --laranja-escuro: #C47B05;
+    --cinza-borda: #e0e0e0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--branco);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Nav */
+nav{
+    background-color: var(--amarelo);
+    padding: 20px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+nav ul{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li a{
+    color: var(--laranja-escuro);
+    font-weight: 500;
+}
+nav ul li a:hover {
+    color: var(--laranja-claro);
+}
+
+
+/* Main */
+.card-contato {
+    background-color: #ffffff; 
+    width: 100%;
+    max-width: 700px;
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 18px 18px 0px var(--amarelo);
+    text-align: center;
+    border: 1px solid #f0f0f0;
+}
+
+h2 {
+    color: var(--laranja-escuro);
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 15px;
+    padding: 15px;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+textarea {
+    height: 180px;
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+button {
+    background-color: var(--laranja-claro);
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 10px auto 0 auto; 
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: var(--laranja-escuro);
+}
+/* Footer */
+footer {
+    background-color: var(--laranja-escuro);
+    position: relative;
+    width: 100%;
+    margin-top: 50px; 
+}
+
+.footer-wave {
+    width: 100%;
+    display: block;
+    margin-bottom: -1px; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px 50px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#copyright {
+    color: var(--branco);
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: var(--amarelo); 
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
