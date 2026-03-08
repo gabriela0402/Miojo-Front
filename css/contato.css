@@ -24,7 +24,65 @@ body{
     background-color: var(--branco);
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+    padding-top: 80px; /* Espaço para a nav fixa */
 }
+
+/* --- NAV DESKTOP --- */
+nav {
+    background-color: var(--amarelo);
+    padding: 20px;
+    border-radius: 0px 0px 30px 30px;
+    position: fixed;   
+    top: 0;      
+    left: 0;     
+    width: 100%;    
+    z-index: 1000;  
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around; /* Espalha os itens */
+    width: 100%;
+}
+
+.nav-menu li a {
+    color: var(--laranja-escuro);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: var(--laranja-claro);
+}
+
+.hamburger {
+    display: none; /* Escondido no Desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 2001;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--laranja-escuro);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* --- MAIN / CARD DE CONTATO --- */
 .container{
     display: flex;
     align-items: center;
@@ -32,31 +90,6 @@ body{
     padding: 50px 20px;
 }
 
-/* Nav */
-nav{
-    background-color: var(--amarelo);
-    padding: 20px;
-    border-radius: 0px 0px 30px 30px;
-}
-
-nav ul{
-    display: flex;
-    padding: 5px;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav ul li a{
-    color: var(--laranja-escuro);
-    font-weight: 500;
-}
-nav ul li a:hover {
-    color: var(--laranja-claro);
-}
-
-
-/* Main */
 .card-contato {
     background-color: #ffffff; 
     width: 100%;
@@ -103,7 +136,6 @@ input, textarea {
     font-family: "Poppins", sans-serif;
     outline: none;
     font-size: 1rem;
-    background-color: #fff;
 }
 
 textarea {
@@ -111,11 +143,7 @@ textarea {
     resize: none;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #ccc;
-}
-
-button {
+button[type="submit"] {
     background-color: var(--laranja-claro);
     color: white;
     border: none;
@@ -126,13 +154,9 @@ button {
     cursor: pointer;
     margin: 10px auto 0 auto; 
     transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
-button:hover {
-    background-color: var(--laranja-escuro);
-}
-/* Footer */
+/* --- FOOTER --- */
 footer {
     background-color: var(--laranja-escuro);
     position: relative;
@@ -148,27 +172,51 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;
+    justify-content: center; 
     padding: 30px 50px; 
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 #copyright {
     color: var(--branco);
     font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0.9;
 }
 
-.footer-social {
-    display: flex;
-    gap: 20px;
-}
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: flex-end; /* Botão na direita */
+    }
 
-.footer-social a {
-    color: var(--amarelo); 
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%; /* Fora da tela */
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--amarelo);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: 0.4s ease-in-out;
+        z-index: 2000;
+    }
+
+    .nav-menu.active {
+        right: 0; /* Ocupa tudo */
+    }
+
+    /* Animação do X */
+    .hamburger.active span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+    .nav-menu li a { font-size: 2rem; }
+    
+    h2 { font-size: 2.2rem; }
+    .card-contato { padding: 30px; }
 }

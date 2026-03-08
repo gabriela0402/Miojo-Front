@@ -9,19 +9,22 @@
 </head>
 
 <body>
-    <header>
+    <header> 
         <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Início</a>
-                </li>
-                <li>
-                    <a href="cardapio1.html">Cardápio</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
-            </ul>
+            <div class="nav-container">
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio1.html">Cardápio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -29,7 +32,7 @@
             <div class="texto-main">
                 <h1>Compre seu Miojo!</h1>
                 <p>Escolha o seu sabor favorito e compre na nossa loja o melhor macarrão instatâneo da atualidade.</p>
-                <a href="cardapio.html">
+                <a id="btn-compre" href="cardapio1.html">
                     <button>Compre agora</button>
                 </a>
             </div>
@@ -61,6 +64,7 @@
             </span>
         </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

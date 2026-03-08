@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Miojo</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Início</a>
-                </li>
-                <li>
-                    <a href="cardapio1.html">Cardápio</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </lis>
-            </ul>
+            <div class="nav-container">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio1.html">Cardápio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="sucesso-container">
@@ -30,7 +34,7 @@
             </div>
 
             <h1>Compra realizada com sucesso!</h1>
-            
+
             <p>Seu pedido foi confirmado e já está sendo preparado com todo cuidado.</p>
             <p>Em breve você receberá um e-mail com os detalhes da sua compra e as próximas etapas.</p>
 
@@ -46,6 +50,7 @@
             </span>
         </div>
     </footer>
-
+    <script src="js/index.js"></script>
 </body>
+
 </html>
